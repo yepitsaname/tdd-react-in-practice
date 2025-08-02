@@ -20,7 +20,7 @@ test('Contains an add recipe button', ()=>{
   render(<App />);
 
   let recipeHeader = screen.getByText('My Recipes');
-  let button = screen.getByRold('button', {name: 'Add Recipe'});
+  let button = screen.getByRole('button', {name: 'Add Recipe'});
 
   expect(button).toBeInTheDocument();
   expect(recipeHeader.compareDocumentPosition(button)).toBe(4);
